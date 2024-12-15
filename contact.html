@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Burger House</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightcyan;
+            color:black;
+            /* background-image: url('images/Rectangle.png'); */
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #343a40;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #495057;
+        }
+
+        .contact-info {
+            margin-bottom: 40px;
+            padding-left: 40px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Burger House</h1>
+    <p>Delicious Burgers & Comfort Food</p>
+</header>
+<main>
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Burger House</strong></p>
+        <p>123 Burger Lane, Food City, FC 12345</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@burgerhouse.com</p>
+    </div>
+
+    <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input id="emailForm" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button id="done" type="submit">Send Message</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p style="text-align: center; padding: 20px; background-color: #343a40; color: white;">
+        &copy; 2024 Burger House. All Rights Reserved.
+    </p>
+</footer>
+
+<script src="burger.js"></script>
+</body>
+</html>
