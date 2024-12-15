@@ -1,0 +1,256 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header Section */
+header {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.delivery-info {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+/* Burger Section */
+.burger-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    color: #333;
+}
+
+.burger-section .text-content {
+    max-width: 30%;
+    flex: 1 1 300px;
+    padding-left: 50px;
+
+    /* Responsive adjustment */
+}
+
+.burger-section .text-content h1 {
+    font-size: 90px;
+    font-weight: bold;
+    line-height: 1.1;
+    padding-left: 10px;
+}
+
+.burger-section .text-content p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+    border: 5px dashed #333;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.burger-section .image-content {
+    flex: 1 1 300px;
+    text-align: center;
+    position: relative;
+    margin-left: 90px;
+}
+
+.burger-section .image-content img {
+    max-width: 100%;
+    height: auto;
+    float: right;
+    padding-right: 80px;
+}
+
+.burger-section .price-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: red;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.burger-section .price-tag small {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* Grid Container */
+.container {
+    display: grid;
+    grid-template-areas:
+        "large large small1"
+        "large large small2";
+    gap: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.text h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.text h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.large {
+    grid-area: large;
+}
+
+.small:nth-child(2) {
+    grid-area: small1;
+}
+
+.small:nth-child(3) {
+    grid-area: small2;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .burger-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .burger-section .text-content,
+    .burger-section .image-content {
+        max-width: 100%;
+    }
+
+    .burger-section .text-content h1 {
+        font-size: 50px;
+    }
+
+    .container {
+        grid-template-areas:
+            "large"
+            "small1"
+            "small2";
+        gap: 20px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .top-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .delivery-info {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .burger-section .text-content h1 {
+        font-size: 40px;
+    }
+
+    .burger-section .text-content p {
+        font-size: 14px;
+    }
+
+    .burger-section .price-tag {
+        position: static;
+        margin: 10px auto;
+    }
+
+    .container {
+        grid-template-areas:
+            "large"
+            "small1"
+            "small2";
+        gap: 10px;
+    }
+
+    .text h2 {
+        font-size: 1.5rem;
+    }
+}
